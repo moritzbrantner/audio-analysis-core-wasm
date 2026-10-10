@@ -1,0 +1,15 @@
+{
+  "name": "@moritzbrantner/audio-analysis-core-wasm",
+  "version": "0.1.0",
+  "description": "WASM package for audio-analysis-core, installable from git by commit.",
+  "license": "MIT OR Apache-2.0",
+  "type": "module",
+  "audioAnalysis": {
+    "repository": "https://github.com/moritzbrantner/audio-analysis",
+    "commit": "dca689df38ac33288f2f6a3b57daac42fd702771"
+  },
+  "scripts": {
+    "test": "bun test --max-concurrency=2 tests",
+    "verify:git-install": "bun scripts/verify-git-install.ts"
+  }
+}
