@@ -37,7 +37,10 @@ jobs:
           bun-version: 1.4.2
 
       - name: Install wasm-pack
-        run: cargo install wasm-pack --version 0.14.0 --locked
+        uses: moritzbrantner/reusable-workflows/.github/actions/install-verified-wasm-cli@e60855ad67f3dad72c283c355d544d6d296241d7
+        with:
+          tool: wasm-pack
+          version: "0.14.0"
 
       - name: Build from the pinned audio-analysis commit
         run: bun run build
